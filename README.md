@@ -38,7 +38,7 @@ El script leerá el archivo CSV especificado en `WORKLOG_PATH` y cargará los wo
 El archivo CSV debe tener las siguientes columnas:
 
 - `issueKey`: clave de la tarea en Jira
-- `date`: fecha en la que se realizó el trabajo, en formato `YYYY-MM-DD HH:mm:ss`
+- `date`: fecha en la que se realizó el trabajo, en formato `YYYY-MM-DD HH:mm:ss`. Por defecto toma la zona horaria del usuario
 - `timeSpentHours`: cantidad de horas trabajadas en la tarea
 - `comment`: comentario sobre el trabajo realizado. Si el contenido es un texto que va separando ítems entre "puntos y comas" (;), el contenido final del worklog será un listado en viñetas. Si no posee puntos y comas, será solamente 1 párrafo de contenido.
 
@@ -46,8 +46,8 @@ Ejemplo de un archivo CSV válido:
 
 ```
 issueKey,date,timeSpentHours,comment
-PROJ-123,2023-05-09,4,Realicé algunas tareas;Actualicé la documentación
-PROJ-456,2023-05-10,2,Hice algunas pruebas
+PROJ-123,2023-04-25 08:00:00,4,Realicé algunas tareas;Actualicé la documentación
+PROJ-456,2023-04-25 10:30:00,2,Hice algunas pruebas
 ```
 
 ## Contribuir
