@@ -1,0 +1,30 @@
+{
+  "name": "jira-worklog",
+  "version": "1.0.0",
+  "description": "Generate worklogs throw Jira API",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "jira",
+    "csv",
+    "worklog"
+  ],
+  "author": {
+    "name": "Félix Gómez",
+    "email": "frg0801@gmail.com",
+    "url": "https://www.github.com/feragome"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.0.3",
+    "fecha": "^4.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
