@@ -44,12 +44,16 @@ function getIssueUrl(issueKey) {
 async function saveIssuesUrls(issuesGenerator) {
     const csv = require("csv-writer").createObjectCsvWriter({
         path: process.env.CSV_OUTPUT_NAME || "issues.csv",
-        header: [{ id: "url", title: "Url" }],
+        header: [
+            { id: "url", title: "Url" },
+            { id: "assignee", title: "Assignee" },
+        ],
     });
 
     try {
         const records = Array.from(issuesGenerator).map((issue) => ({
             url: issue.url,
+            assignee: issue.assignee,
         }));
         await csv.writeRecords(records);
         console.log("...Done");
@@ -87,6 +91,7 @@ function validateArgs(args) {
             yield {
                 key: issue.key,
                 url: getIssueUrl(issue.key),
+                assignee: issue.fields.assignee.displayName,
             };
     })();
     // Save the urls to all issues in a CSV file
