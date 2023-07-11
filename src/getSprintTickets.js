@@ -18,7 +18,7 @@ async function getIssuesInSprint(sprintId) {
     try {
         console.log(`Getting issues in sprint ${sprintId}`);
         const issues = await jira.searchJira(
-            `project = "UNI" AND Sprint='${sprintId}' ORDER BY Rank ASC`
+            `project = "UNI" AND Sprint='${sprintId}' ORDER BY assignee ASC`
         );
         console.log(`Found ${issues.total} issues in sprint ${sprintId}`);
         return issues;
