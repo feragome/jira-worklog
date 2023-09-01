@@ -23,6 +23,20 @@ Antes de ejecutar el script, debes crear un archivo `.env` en el directorio raí
 - `JIRA_API_TOKEN`: token de API de Jira generado para el usuario
 - `WORKLOG_PATH`: ruta del archivo CSV que contiene los worklogs a cargar
 
+## Para obtener JIRA_API_TOKEN seguir los pasos:
+  1. Login con nuestra cuenta en Jira
+  2. Igresar a la URL: https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/#Create-an-API-token
+  3. Click sobre el tobon azul "Crear token de API".
+  4. Pedira una etiqueta para nuestro token. Agregar cualquier nombre fácil de recordar. Ej: perez_api_token_1
+  5. Copiar el token y pegar en la variable indicada más arriba
+
+## Ejemplo de archivo .env. Son datos de ejemplo. Reemplazar los mismos por las que corresponden las nuestras
+
+- `JIRA_URL`: https://cafecool.atlassian.net/
+- `JIRA_EMAIL`: jperez@cafecool.com.ar
+- `JIRA_API_TOKEN`: WTWTI3dFfGF0wwc1o6GCYRc-_mCgHIG_4QlGvT2ZSiLf1_Z_GT1lQv-j62QUlAss0Q9uM0cIk2DgiFT8GTSXkf8G5pWLBKsrFSjKbJ5H3OpFuuu-d9HePZDTPLVRiHiwvVk_9VkDBddMH1-fADXe6SQ1JnWcZItr2W6IYVJG_HwRt8SWZskonXo=42BECF3M
+- `WORKLOG_PATH`: c:\Users\jperez\Documents\Planilla_2023.csv
+
 ## Uso
 
 Para cargar los worklogs, ejecuta el siguiente comando:
